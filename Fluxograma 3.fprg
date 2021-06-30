@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="rodri"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-06-26 12:40:06 "/>
+        <attribute name="created" value="cm9kcmk7TEFQVE9QLTk3RzBTVEVVOzIwMjEtMDYtMjU7IjEwOjMyOjU3ICI7Mjc5Ng=="/>
+        <attribute name="edited" value="cm9kcmk7TEFQVE9QLTk3RzBTVEVVOzIwMjEtMDYtMjY7IjEyOjQwOjA2ICI7MzsyOTAy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome, sobrenome" type="String" array="False" size=""/>
+            <declare name="nota1, nota2, nota3, nota4, media, total" type="Real" array="False" size=""/>
+            <output expression="&quot;Digite seu nome: &quot;" newline="True"/>
+            <input variable="nome"/>
+            <output expression="&quot;Digite seu sobrenome: &quot;" newline="True"/>
+            <input variable="sobrenome"/>
+            <output expression="&quot;digite a nota do primeiro bimestre:&quot;" newline="True"/>
+            <input variable="nota1"/>
+            <output expression="&quot;digite a nota do segundo bimestre:&quot;" newline="True"/>
+            <input variable="nota2"/>
+            <output expression="&quot;digite a nota do terceiro bimestre:&quot;" newline="True"/>
+            <input variable="nota3"/>
+            <output expression="&quot;digite a nota do quarto bimestre:&quot;" newline="True"/>
+            <input variable="nota4"/>
+            <assign variable="total" expression="(nota1+nota2+nota3+nota4)"/>
+            <assign variable="media" expression="(nota1+nota2+nota3+nota4)/4"/>
+            <output expression="&quot;Seu nome &#233;: &quot; &amp; nome &amp; &quot; Seu sobrenome &#233;: &quot; &amp; sobrenome &amp;  &quot; As notas dos quatro bimestre somam: &quot; &amp; total &amp; &quot; Sua m&#233;dia &#233; de: &quot; &amp; media" newline="True"/>
+            <if expression="media&lt;=7">
+                <then>
+                    <output expression="&quot;Aprovado&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Reprovado&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
