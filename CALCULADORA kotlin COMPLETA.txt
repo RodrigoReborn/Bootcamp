@@ -1,0 +1,52 @@
+fun main() {
+
+    println("Digite o primeiro número para operação")
+    val a = readLine()?.toFloat()
+
+    println("Digite o segundo número para operação")
+    val b = readLine()?.toFloat()
+
+
+    println("Digite o número para operação")
+    println("1 = Soma")
+    println("2 = Subtração")
+    println("3 = Multiplicação")
+    println("4 = Divisão")
+    val operacao = readLine()!!.toInt()
+
+    if (a == null || b == null) {
+        println("Número inválido")
+    } else {
+        when (operacao) {
+            1 -> {
+                val soma = soma(a, b)
+                println("O resultado da Soma dos numeros é = $soma")
+            }
+            2 -> {
+                val sub = sub(a, b)
+                println("O resultado da Subtração dos numeros é = $sub")
+            }
+            3 -> {
+                val mult = mult(a, b)
+                println("O resultado da Multiplicação dos numeros é = $mult")
+            }
+            4 -> {
+                val div = div(a, b)
+                println("O resultado da Divisão dos numeros é = $div")
+            }
+        }
+    }
+
+}
+
+// Função Soma
+fun soma(a: Float, b: Float) = a + b
+
+// Função Multiplicação
+fun mult(a: Float, b: Float) = a * b
+
+// Função Divisão
+fun div(a: Float, b: Float) = a / b
+
+// Função Subtração
+fun sub(a: Float, b: Float) = a - b
